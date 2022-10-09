@@ -4,12 +4,12 @@ import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword } f
 import { getStorage } from "firebase/storage";
 import { initializeFirestore } from "firebase/firestore";
 const firebaseConfig = {
-  apiKey: "AIzaSyAM-HoszHfKCObbt9Qz2ZiVKmCn1mnl11o",
-  authDomain: "rn-communication-14826.firebaseapp.com",
-  projectId: "rn-communication-14826",
-  storageBucket: "rn-communication-14826.appspot.com",
-  messagingSenderId: "808819221650",
-  appId: "1:808819221650:web:ec4f34d2e95efd0a89b24b",
+  apiKey: "AIzaSyAIXtXjZI78TT1X7tN-zBfoCNAVbLVpRIo",
+  authDomain: "rm-chat-client.firebaseapp.com",
+  projectId: "rm-chat-client",
+  storageBucket: "rm-chat-client.appspot.com",
+  messagingSenderId: "856675351917",
+  appId: "1:856675351917:web:c6cfe32a415366ab8aae64"
 };
 
 // Initialize Firebase
@@ -19,9 +19,10 @@ export const storage = getStorage(app);
 export const db = initializeFirestore(app, {
   experimentalForceLongPolling: true,
 });
-export function signIn(email,password){
-    return signInWithEmailAndPassword(auth,email,password)
+
+export function signIn(email, password) {
+  return signInWithEmailAndPassword(auth, email, password);
 }
-export function signUp(email,password){
-    return createUserWithEmailAndPassword(app,email,password)
+export function signUp(email, password) {
+  return createUserWithEmailAndPassword(auth, email, password);
 }
