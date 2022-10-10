@@ -33,6 +33,7 @@ function App() {
         setCurrentUser(user);
       }
     });
+
     return () => unsubscribe();
   }, []);
   if (loading) {

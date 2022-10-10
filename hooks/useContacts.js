@@ -29,8 +29,8 @@ function mapContactToUser(contact) {
   return {
     contactName:
       contact.firstName && contact.lastName
-        ? `${contact.lastName} ${contact.firstName} `
+        ? `${contact.lastName}${contact.middleName?contact.middleName:""}${contact.firstName} `
         : contact.firstName,
-    // email: contact?.emails[0].email,
+    email: contact.emails&&contact.emails[0].email,
   };
 }
