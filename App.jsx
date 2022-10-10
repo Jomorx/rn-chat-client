@@ -10,6 +10,7 @@ import ContextWrapper from "./context/ContextWrapper";
 import Context from "./context/Context";
 import Profile from "./screens/Profile";
 import Home from "./screens/Home";
+import Contacts from "./screens/Contacts";
 
 LogBox.ignoreLogs([
   "Setting a timer",
@@ -65,6 +66,11 @@ function App() {
             name="home"
             options={{ title: "Whatsapp" }}
             component={Home}
+          />
+          <Stack.Screen
+            name="contacts"
+            options={{ title: "Select Contacts" }}
+            component={Contacts}
           />
         </Stack.Navigator>
       )}
